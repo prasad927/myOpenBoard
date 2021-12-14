@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.options-cont{
+    height: 4rem;
+    width:  3.5rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    top:2rem;
+    left:2rem;
+
+    /* for center the icon inside options-cont box */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /* for circular shape */
+    border-radius: 50%;
+
+     /*font size inherited by icons also  */
+    font-size :1.5rem;
+
+    /* box shadow taken from site   https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools-cont{
+    display:flex;
+    height:5rem;
+    width: 55vw;
+    /* background-color: lightblue; */
+    background-color: #f1f2f6;
+    justify-content: space-around;
+
+    position:absolute;
+    top:2rem;
+    left:25vw;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* for animation section*/
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+/* for img */
+.tools-cont > *{
+    display:block;
+    width:4rem;
+}
+
+/* pencil-cont */
+.pencil-tool-cont{
+    width: 7rem;
+    height:5rem;
+    /* background-color:lightblue; */
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    display:none;/*for hide at start*/
+    position:absolute;
+    top:7rem;
+    left:25vw;
+    border-radius: 3px;
+}
+.pencil-width-cont{
+    /* background-color:goldenrod; */
+    display: flex;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input{
+    /* 80% of parent */
+    width:80%;
+}
+
+.pencil-colors-cont{
+    /* background-color: rgb(90, 82, 72); */
+    height: calc(100% - 2rem);
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    /* gap between colors box */
+    gap:1rem;
+}
+
+.pencil-color{
+    height: 2rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+
+/* Eraser cont */
+.eraser-tool-cont{
+    height: 2rem;
+    width:7rem;
+    
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+    display:none;/*for hide at start*/
+    justify-content:center;
+    align-items: center;
+
+    position:absolute;
+    top:7rem;
+    left:33vw;
+}
+
+.eraser-tool-cont input{
+    width: 80%;
+}
+
+
+/* sticky container */
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top:15rem;
+    left:15rem;
+}
+
+.header-cont{
+    height: 2rem;
+    background-color:#f1f2f6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-cont > *{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+}
+.minimize{
+    background-color: #2ed573;
+}
+.remove{
+    background-color: #ff6b81;
+}
+
+
+.note-cont{
+    height:calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea{
+    /* 100% of parent */
+    height:100%;
+    width:100%;
+    outline: none;
+    resize: none;
+    border:none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* for stickynotes upload */
+img{
+    height: 100%;
+    width: 100%;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
