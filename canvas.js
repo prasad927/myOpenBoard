@@ -4,7 +4,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 
-
 //PENCIL TOOL AND ERASER
 const pencilColors= document.querySelectorAll('.pencil-color');
 const pencilWidthElem = document.querySelector('.pencil-width');
@@ -162,7 +161,6 @@ const undoRedoactions = function(trackObj){
 //redo
 redo.addEventListener('click',function(e){
     //action
-    console.log('redo');
     if(track<undoRedoTracker.length-1){
         for(let i=track;i<undoRedoTracker.length;i++){
             let { x, y, eventT, color, width } = undoRedoTracker[i];
@@ -183,7 +181,6 @@ redo.addEventListener('click',function(e){
 //undo
 undo.addEventListener('click',function(e){
     //action
-    console.log('undo');
     if(track>0){
 
         for(let i=track;i>=0;i--){
